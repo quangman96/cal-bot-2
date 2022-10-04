@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <div class="area">
+      <div style="display: flex; margin-top: 20px">
+        <h3>HGNC Bot</h3>
+        <span style="flex: 1 1 auto"></span>
+        <button id="btn-1" type="button">Clear!</button>
+      </div>
+      <div class="rr">
+        <input id="name" placeholder="C" />
+        <span id="pri"></span>
+      </div>
+      <div class="rr">
+        <select class="select" id="type">
+          <option value="l">L</option>
+          <option value="s">S</option>
+        </select>
+        <input id="x" type="number" min="0" placeholder="X" value="18" />
+      </div>
+      <div class="rr">
+        <input id="entry" type="number" min="0" placeholder="Entry" />
+        <input id="vol" type="number" min="0" placeholder="VOL" />
+        <input id="margin" type="number" min="0" placeholder="Margin" />
+      </div>
+      <div class="rr">
+        <input id="tp" type="number" min="0" placeholder="TP" />
+        <input id="tpu" type="number" min="0" placeholder="+" />
+        <input id="tpp" type="number" min="0" placeholder="%" />
+      </div>
+      <div class="rr">
+        <input id="sl" type="number" min="0" placeholder="SL" />
+        <input id="slu" type="number" min="0" placeholder="-" />
+        <input id="slp" type="number" min="0" placeholder="%" />
+      </div>
+      <div style="display: flex; margin-top: 20px">
+        <h3>Random Number</h3>
+        <span style="flex: 1 1 auto"></span>
+        <button id="btn-2" type="button">Go!</button>
+      </div>
+      <div class="rr">
+        <input id="min" type="number" min="0" placeholder="Min" />
+        <input id="max" type="number" min="0" placeholder="Max" />
+        <span style="font-size: 32px; padding-left: 30px" id="rad"></span>
+      </div>
+
+      <script src="popup.js"></script>
+    </div>
+  </body>
+</html>
