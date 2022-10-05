@@ -27,11 +27,11 @@ function reCal(vari = "") {
   handle1(vari, z, zz, zzz);
   if (!zzzz) return;
   const { type, x, entry, vol, margin, tp, tpu, tpp, sl, slu, slp } = obj;
-  if (tp || tpp || tpu) {
-    handle2(type, x, tp, tpp, tpu);
+  if ((tp || tpp || tpu) && x && entry && vol) {
+    handle2(vari, x, entry, vol, tp, tpp, tpu, type);
   }
-  if (sl || slp || slu) {
-    handle3(type, x, sl, slp, slu);
+  if ((sl || slp || slu) && x && entry && vol) {
+    handle3(vari, x, entry, vol, sl, slp, slu, type);
   }
 }
 
@@ -146,5 +146,94 @@ function handle1(vari, x, vol, margin) {
     return;
   }
 }
-function handle2(type, x, tp, tpp, tpu) {}
-function handle3(type, x, sl, slp, slu) {}
+function handle2(vari, x, entry, vol, tp, tpp, tpu, type) {
+  if (vari === "tp") {
+    if (!tp) {
+      setInp("tpp", "");
+      setInp("tpu", "");
+      return;
+    }
+    const z = getZ(tp, entry, x, type);
+    setInp("tpp", z);
+    setInp("tpu", (z / 100) * getN(vol));
+    return;
+  }
+
+  if (vari === "tpu") {
+    if (!tpu) {
+      setInp("tpp", "");
+      setInp("tp", "");
+      return;
+    }
+
+    const z = getX(tpu, x, vol, type);
+    setInp("tpp", getN(tpu) * getN(entry) * z);
+    setInp("tp", getN(entry) + getN(entry) * z);
+  }
+
+  if (vari === "tpp") {
+    if (!tpp) {
+      setInp("tpu", "");
+      setInp("tp", "");
+      return;
+    }
+    const z = getY(tpp, x, type);
+    setInp("tpu", getN(vol) * getN(x) * z);
+    setInp("tp", getN(entry) + getN(entry) * z);
+  }
+}
+function handle3(vari, x, entry, vol, sl, slp, slu, type) {
+  if (vari === "sl") {
+    if (!sl) {
+      setInp("slp", "");
+      setInp("slu", "");
+      return;
+    }
+    const z = getZ(sl, entry, x, type);
+    setInp("slp", z);
+    setInp("slu", (z / 100) * getN(vol));
+    return;
+  }
+
+  if (vari === "slu") {
+    if (!slu) {
+      setInp("slp", "");
+      setInp("sl", "");
+      return;
+    }
+
+    const z = getX(slu, x, vol, type);
+    setInp("slp", getN(slu) * getN(entry) * z);
+    setInp("sl", getN(entry) + getN(entry) * z);
+  }
+
+  if (vari === "slp") {
+    if (!slp) {
+      setInp("slu", "");
+      setInp("sl", "");
+      return;
+    }
+    const z = getY(slp, x, type);
+    setInp("slu", getN(vol) * getN(x) * z);
+    setInp("sl", getN(entry) + getN(entry) * z);
+  }
+}
+
+function getN(n) {
+  return +n;
+}
+
+function getZ(t, e, x, y) {
+  const n = ((getN(t) / getN(e)) * 100 - 100) * getN(x);
+  return y === "l" ? n : -n;
+}
+
+function getX(t, x, v, y) {
+  const n = getN(t) / getN(v) / getN(x);
+  return y === "l" ? n : -n;
+}
+
+function getY(t, x, y) {
+  const n = getN(t) / getN(x) / 100;
+  return y === "l" ? n : -n;
+}
