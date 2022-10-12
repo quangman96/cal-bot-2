@@ -29,7 +29,9 @@ select {
   width: 70px;
 }
 .select {
+  margin-top: 16px;
   width: 88px;
+  height: 37px;
 }
 
 h3 {
@@ -63,7 +65,7 @@ select:focus {
 }
 
 label {
-  margin: 20px 0;
+  margin: 10px 0;
   position: relative;
   display: inline-block;
 }

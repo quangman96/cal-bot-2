@@ -4,10 +4,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="container">
-    <label>
-      <input class="input" placeholder=" " />
-      <span class="span"> Text</span>
-    </label>
     <div class="area">
       <div style="display: flex; margin-top: 20px">
         <h3>HGNC Bot</h3>
@@ -16,7 +12,12 @@
       </div>
       <div class="rr">
         <label>
-          <input class="input" id="name" placeholder=" " />
+          <input
+            class="input"
+            id="name"
+            placeholder=" "
+            style="text-transform: uppercase"
+          />
           <span class="span">Coin</span>
         </label>
         <span id="pri"></span>
@@ -39,19 +40,59 @@
         </label>
       </div>
       <div class="rr">
-        <input id="entry" type="number" min="0" placeholder="Entry" />
-        <input id="vol" type="number" min="0" placeholder="VOL" />
-        <input id="margin" type="number" min="0" placeholder="Margin" />
+        <label>
+          <input
+            class="input"
+            id="entry"
+            type="number"
+            min="0"
+            placeholder=" "
+          />
+          <span class="span">Entry</span>
+        </label>
+
+        <label>
+          <input class="input" id="vol" type="number" min="0" placeholder=" " />
+          <span class="span">VOL</span>
+        </label>
+        <label>
+          <input
+            class="input"
+            id="margin"
+            type="number"
+            min="0"
+            placeholder=" "
+          />
+          <span class="span">Margin</span>
+        </label>
       </div>
       <div class="rr">
-        <input id="tp" type="number" min="0" placeholder="TP" />
-        <input id="tpu" type="number" min="0" placeholder="+" />
-        <input id="tpp" type="number" min="0" placeholder="%" />
+        <label>
+          <input class="input" id="tp" type="number" min="0" placeholder=" " />
+          <span class="span">TP</span>
+        </label>
+        <label>
+          <input class="input" id="tpu" type="number" min="0" placeholder=" " />
+          <span class="span">TP $</span>
+        </label>
+        <label>
+          <input class="input" id="tpp" type="number" min="0" placeholder=" " />
+          <span class="span">TP %</span>
+        </label>
       </div>
       <div class="rr">
-        <input id="sl" type="number" min="0" placeholder="SL" />
-        <input id="slu" type="number" min="0" placeholder="-" />
-        <input id="slp" type="number" min="0" placeholder="%" />
+        <label>
+          <input class="input" id="sl" type="number" min="0" placeholder=" " />
+          <span class="span">SL</span>
+        </label>
+        <label>
+          <input class="input" id="slu" type="number" min="0" placeholder=" " />
+          <span class="span">SL $</span>
+        </label>
+        <label>
+          <input class="input" id="slp" type="number" min="0" placeholder=" " />
+          <span class="span">SL %</span>
+        </label>
       </div>
       <div style="display: flex; margin-top: 20px">
         <h3>Random Number</h3>
@@ -59,8 +100,14 @@
         <button id="btn-2" type="button">Go!</button>
       </div>
       <div class="rr">
-        <input id="min" type="number" min="0" placeholder="Min" />
-        <input id="max" type="number" min="0" placeholder="Max" />
+        <label>
+          <input class="input" id="min" type="number" min="0" placeholder=" " />
+          <span class="span">Min</span>
+        </label>
+        <label>
+          <input class="input" id="max" type="number" min="0" placeholder=" " />
+          <span class="span">Max</span>
+        </label>
         <span style="font-size: 32px; padding-left: 30px" id="rad"></span>
       </div>
 

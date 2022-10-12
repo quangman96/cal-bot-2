@@ -1,7 +1,7 @@
 {
   "name": "Calculator Bot",
   "description": "Simple calculator bot !!!",
-  "version": "1.0.0",
+  "version": "1.1",
   "manifest_version": 3,
   "permissions": [],
   "host_permissions": [

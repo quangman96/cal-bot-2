@@ -58,7 +58,9 @@ function getPri(name) {
 }
 
 function setPri(price) {
-  document.getElementById("pri").innerHTML = price.slice(0, 5);
+  document.getElementById("pri").innerHTML = price
+    ? parseFloat(price).toFixed(2)
+    : price;
 }
 
 function setVal(name, value) {
@@ -85,6 +87,7 @@ function cls() {
     "min",
     "max",
   ].forEach((e) => setInp(e, ""));
+  setPri("");
 }
 
 function setInp(name, val) {
@@ -154,7 +157,7 @@ function handle2(vari, x, entry, vol, tp, tpp, tpu, type) {
       return;
     }
     const z = getZ(tp, entry, x, type);
-    setInp("tpp", z);
+    setInp("tpp", z / getN(x));
     setInp("tpu", (z / 100) * getN(vol));
     return;
   }
@@ -167,7 +170,7 @@ function handle2(vari, x, entry, vol, tp, tpp, tpu, type) {
     }
 
     const z = getX(tpu, x, vol, type);
-    setInp("tpp", getN(tpu) * getN(entry) * z);
+    setInp("tpp", (getN(tpu) * getN(entry) * z) / getN(x));
     setInp("tp", getN(entry) + getN(entry) * z);
   }
 
@@ -177,7 +180,7 @@ function handle2(vari, x, entry, vol, tp, tpp, tpu, type) {
       setInp("tp", "");
       return;
     }
-    const z = getY(tpp, x, type);
+    const z = getY(getN(tpp) * getN(x), x, type);
     setInp("tpu", getN(vol) * getN(x) * z);
     setInp("tp", getN(entry) + getN(entry) * z);
   }
@@ -190,7 +193,7 @@ function handle3(vari, x, entry, vol, sl, slp, slu, type) {
       return;
     }
     const z = getZ(sl, entry, x, type);
-    setInp("slp", z);
+    setInp("slp", z / getN(x));
     setInp("slu", (z / 100) * getN(vol));
     return;
   }
@@ -203,7 +206,7 @@ function handle3(vari, x, entry, vol, sl, slp, slu, type) {
     }
 
     const z = getX(slu, x, vol, type);
-    setInp("slp", getN(slu) * getN(entry) * z);
+    setInp("slp", (getN(slu) * getN(entry) * z) / getN(x));
     setInp("sl", getN(entry) + getN(entry) * z);
   }
 
@@ -213,7 +216,7 @@ function handle3(vari, x, entry, vol, sl, slp, slu, type) {
       setInp("sl", "");
       return;
     }
-    const z = getY(slp, x, type);
+    const z = getY(getN(slp) * getN(x), x, type);
     setInp("slu", getN(vol) * getN(x) * z);
     setInp("sl", getN(entry) + getN(entry) * z);
   }
