@@ -61,3 +61,37 @@ select:focus {
 .rr {
   display: flex;
 }
+
+label {
+  margin: 20px 0;
+  position: relative;
+  display: inline-block;
+}
+
+.span {
+  padding: 10px;
+  pointer-events: none;
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  transition: 0.2s;
+  transition-timing-function: ease;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  opacity: 0.5;
+}
+
+.input:focus + .span,
+.input:not(:placeholder-shown) + .span {
+  left: 24px;
+  top: 10px;
+  opacity: 1;
+  color: darkslategray;
+  transform: scale(0.9) translateY(-100%) translateX(-30px);
+}
+
+/* For IE Browsers*/
+.input:focus + .span,
+.input:not(:-ms-input-placeholder) + .span {
+  opacity: 1;
+  transform: scale(0.75) translateY(-100%) translateX(-30px);
+}
