@@ -58,9 +58,15 @@ function getPri(name) {
 }
 
 function setPri(price) {
-  document.getElementById("pri").innerHTML = price
-    ? parseFloat(price).toFixed(2)
-    : price;
+  document.getElementById("pri").innerHTML = price ? calPri(price) : price;
+}
+
+function calPri(p) {
+  const s = p.split(".");
+  if (s.length === 1) {
+    return p;
+  }
+  return `${s[0]}.${s[1].slice(0, 3)}`;
 }
 
 function setVal(name, value) {
