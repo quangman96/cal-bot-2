@@ -187,3 +187,13 @@ document["getElementsByClassName"]("eps_title")[0x0]["addEventListener"](
       : (_0x187df6[_0x2cdb19(0x134)][_0x2cdb19(0x136)] = "none");
   }
 );
+
+document
+  .getElementsByClassName("input-wrapper")[2]
+  .addEventListener("dblclick", () => fc(2));
+document
+  .getElementsByClassName("input-wrapper")[3]
+  .addEventListener("dblclick", () => fc(3));
+document
+  .getElementsByClassName("input-wrapper")[4]
+  .addEventListener("dblclick", () => fc(4));

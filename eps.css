@@ -9,7 +9,7 @@
   border-radius: 5px;
   z-index: 9999;
   color: #31c48a;
-  width: 268px;
+  width: 200px;
 }
 #EPS_Content {
   display: block;
@@ -73,6 +73,7 @@
   padding: 0 5px;
 }
 .vol-wrapper {
+  display: none !important;
   width: 100%;
   background-color: transparent;
   display: flex;
