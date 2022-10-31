@@ -197,3 +197,6 @@ document
 document
   .getElementsByClassName("input-wrapper")[4]
   .addEventListener("dblclick", () => fc(4));
+  document
+  .getElementsByClassName("clss")[0]
+  .addEventListener("click", cls);

@@ -35,7 +35,7 @@ var _0x262d7c = _0x3380;
 })(_0x1696, 0x39bfc),
   document[_0x262d7c(0x166)]["insertAdjacentHTML"](
     _0x262d7c(0x16b),
-    "<div\x20id=\x22EPS\x22>\x09<span\x20class=\x22eps_title\x22></span>\x09<div\x20id=\x22EPS_Content\x22>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<input\x20type=\x22checkbox\x22\x20id=\x22fixlayout\x22\x20/><span\x20class=\x22prefix\x22>Full\x20screen</span>\x09\x09</div>\x09\x09<input\x20type=\x22number\x22\x20name=\x22ratio\x22\x20id=\x22ratio\x22\x20step=\x221\x22\x20value=\x22125\x22\x20readonly>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>Risk</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22risk\x22\x20id=\x22risk\x22\x20step=\x220.001\x22\x20value=\x221\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>Entry</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22entry_price\x22\x20id=\x22entry_price\x22\x20step=\x220.001\x22\x20value=\x2219000\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>SL</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22stoploss_price\x22\x20id=\x22stoploss_price\x22\x20step=\x220.001\x22\x20value=\x2220000\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>Volume</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22vol\x22\x20id=\x22vol\x22\x20step=\x220.001\x22\x20readonly\x20value=\x220.001\x22><span>COIN</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>Margin</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22margin\x22\x20id=\x22margin\x22\x20step=\x220.001\x22\x20readonly><span>USDT</span>\x09\x09</div>\x09\x09<fieldset\x20class=\x22vol-wrapper\x22>\x09\x09\x09<legend>1/2\50%x20Vol\x20chốt\x20non\x20-\x20gồng\x20lời</legend>\x09\x09\x09<div\x20class=\x22vol\x22>\x09\x09\x09\x09<span\x20class=\x22prefix\x22>Long:</span>\x09\x09\x09\x09<input\x20type=\x22text\x22\x20class=\x22input\x22\x20id=\x22vol-long\x22\x20value=\x22\x22\x20readonly\x20/>\x09\x09\x09</div>\x09\x09\x09<div\x20class=\x22vol\x22>\x09\x09\x09\x09<span\x20class=\x22prefix\x22>Short:</span>\x09\x09\x09\x09<input\x20type=\x22text\x22\x20class=\x22input\x22\x20id=\x22vol-short\x22\x20value=\x22\x22\x20readonly\x20/>\x09\x09\x09</div>\x20\x20\x20\x20\x09</fieldset>\x09\x09</div></div>"
+    "<div\x20id=\x22EPS\x22>\x09<span\x20class=\x22eps_title\x22></span>\x09<div\x20id=\x22EPS_Content\x22>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<input\x20type=\x22checkbox\x22\x20id=\x22fixlayout\x22\x20/><span\x20class=\x22prefix\x22>\x20FULL\x20SCREEN</span><span\x20class=\x22cls\x22></span><span\x20class=\x22clss\x22>CLEAR</span>\x09\x09</div>\x09\x09<input\x20type=\x22number\x22\x20name=\x22ratio\x22\x20id=\x22ratio\x22\x20step=\x221\x22\x20value=\x22125\x22\x20readonly>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>RISK</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22risk\x22\x20id=\x22risk\x22\x20step=\x220.001\x22\x20value=\x2210\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>ENTRY</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22entry_price\x22\x20id=\x22entry_price\x22\x20step=\x220.001\x22\x20value=\x22\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>SL</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22stoploss_price\x22\x20id=\x22stoploss_price\x22\x20step=\x220.001\x22\x20value=\x22\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>VOLUME</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22vol\x22\x20id=\x22vol\x22\x20step=\x220.001\x22\x20readonly\x20value=\x22\x22><span>COIN</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>MARGIN</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22margin\x22\x20id=\x22margin\x22\x20step=\x220.001\x22\x20readonly><span>USDT</span>\x09\x09</div>\x09\x09<fieldset\x20class=\x22vol-wrapper\x22>\x09\x09\x09<legend>1/2\50%x20Vol\x20chốt\x20non\x20-\x20gồng\x20lời</legend>\x09\x09\x09<div\x20class=\x22vol\x22>\x09\x09\x09\x09<span\x20class=\x22prefix\x22>Long:</span>\x09\x09\x09\x09<input\x20type=\x22text\x22\x20class=\x22input\x22\x20id=\x22vol-long\x22\x20value=\x22\x22\x20readonly\x20/>\x09\x09\x09</div>\x09\x09\x09<div\x20class=\x22vol\x22>\x09\x09\x09\x09<span\x20class=\x22prefix\x22>Short:</span>\x09\x09\x09\x09<input\x20type=\x22text\x22\x20class=\x22input\x22\x20id=\x22vol-short\x22\x20value=\x22\x22\x20readonly\x20/>\x09\x09\x09</div>\x20\x20\x20\x20\x09</fieldset>\x09\x09</div></div>"
   );
 function removeRule() {
   var _0x5dc2d1 = _0x262d7c;
@@ -179,16 +179,21 @@ checkbox[_0x262d7c(0x154)]("change", (_0x2d003f) => {
       ] = _0x4c239a(0x157)));
 });
 
+function cls() {
+  document.getElementById("entry_price").value = "";
+  document.getElementById("stoploss_price").value = "";
+  document.getElementById("vol").value = "";
+  document.getElementById("margin").value = "";
+}
+
 function fc(n) {
   const val =
     document.getElementsByClassName("input-wrapper")[n].children[1].value;
-  document.getElementById(id).value = new Number(val);
-
-  if (n === 4) {
-    const element = document.querySelectorAll(".ant-input")[1];
-    element.focus();
-    document.execCommand("selectAll");
-    document.execCommand("delete");
-    document.execCommand("insertText", false, +val);
-  }
+  const obj = document.querySelectorAll(".ant-input");
+  const index = (n === 4 ? 1 : 0) + obj.length - 4;
+  const element = obj[index];
+  element.focus();
+  document.execCommand("selectAll");
+  document.execCommand("delete");
+  document.execCommand("insertText", false, +val);
 }
