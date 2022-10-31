@@ -179,8 +179,16 @@ checkbox[_0x262d7c(0x154)]("change", (_0x2d003f) => {
       ] = _0x4c239a(0x157)));
 });
 
-function fc(n, id = "") {
+function fc(n) {
   const val =
     document.getElementsByClassName("input-wrapper")[n].children[1].value;
   document.getElementById(id).value = new Number(val);
+
+  if (n === 4) {
+    const element = document.querySelectorAll(".ant-input")[1];
+    element.focus();
+    document.execCommand("selectAll");
+    document.execCommand("delete");
+    document.execCommand("insertText", false, +val);
+  }
 }
