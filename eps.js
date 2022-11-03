@@ -189,11 +189,18 @@ function cls() {
 function fc(n) {
   const val =
     document.getElementsByClassName("input-wrapper")[n].children[1].value;
-  const obj = document.querySelectorAll(".ant-input");
-  const index = (n === 4 ? 1 : 0) + obj.length - 4;
-  const element = obj[index];
-  element.focus();
-  document.execCommand("selectAll");
-  document.execCommand("delete");
-  document.execCommand("insertText", false, +val);
+  const isOpen =
+  document.getElementsByClassName("pages-contract-handle-index-active")[0]
+  .innerHTML === "Mở vị thế";
+  const parent = document.getElementsByClassName(
+    "pages-contract-handle-index-handleWrapper"
+    )[0];
+    const inputs = parent.querySelectorAll(".ant-input");
+    const index = (n === 4 ? 1 : 0) + (isOpen ? 0 : 2); 
+    const element = inputs[index];
+    element.focus();
+    document.execCommand("selectAll");
+    document.execCommand("delete");
+    document.execCommand("insertText", false, +val);
+    
 }
