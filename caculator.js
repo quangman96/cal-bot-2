@@ -197,6 +197,19 @@ document
 document
   .getElementsByClassName("input-wrapper")[4]
   .addEventListener("dblclick", () => fc(4));
-  document
-  .getElementsByClassName("clss")[0]
-  .addEventListener("click", cls);
+document.getElementsByClassName("clss")[0].addEventListener("click", cls);
+document.getElementsByClassName("go")[0].addEventListener("click", go);
+
+setTimeout(() => {
+  const chartPage = document.getElementById('tv_chart_container');
+  if (chartPage) {
+    chartPage.onkeydown = function (e) {
+      if (+e?.keyCode === 192) {
+        console.log(`OK`);
+      }
+    };
+  } else {
+    console.log(`ng`)
+  }
+}, 5000);
+

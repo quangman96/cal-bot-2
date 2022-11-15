@@ -35,7 +35,7 @@ var _0x262d7c = _0x3380;
 })(_0x1696, 0x39bfc),
   document[_0x262d7c(0x166)]["insertAdjacentHTML"](
     _0x262d7c(0x16b),
-    "<div\x20id=\x22EPS\x22>\x09<span\x20class=\x22eps_title\x22></span>\x09<div\x20id=\x22EPS_Content\x22>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<input\x20type=\x22checkbox\x22\x20id=\x22fixlayout\x22\x20/><span\x20class=\x22prefix\x22>\x20FULL\x20SCREEN</span><span\x20class=\x22cls\x22></span><span\x20class=\x22clss\x22>CLEAR</span>\x09\x09</div>\x09\x09<input\x20type=\x22number\x22\x20name=\x22ratio\x22\x20id=\x22ratio\x22\x20step=\x221\x22\x20value=\x22125\x22\x20readonly>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>RISK</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22risk\x22\x20id=\x22risk\x22\x20step=\x220.001\x22\x20value=\x2210\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>ENTRY</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22entry_price\x22\x20id=\x22entry_price\x22\x20step=\x220.001\x22\x20value=\x22\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>SL</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22stoploss_price\x22\x20id=\x22stoploss_price\x22\x20step=\x220.001\x22\x20value=\x22\x22><span>USDT</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>VOLUME</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22vol\x22\x20id=\x22vol\x22\x20step=\x220.001\x22\x20readonly\x20value=\x22\x22><span>COIN</span>\x09\x09</div>\x09\x09<div\x20class=\x22input-wrapper\x22>\x09\x09\x09<span\x20class=\x22input-prefix\x22>MARGIN</span>\x09\x09\x09<input\x20autocomplete=\x22off\x22\x20class=\x22input\x22\x20type=\x22number\x22\x20name=\x22margin\x22\x20id=\x22margin\x22\x20step=\x220.001\x22\x20readonly><span>USDT</span>\x09\x09</div>\x09\x09<fieldset\x20class=\x22vol-wrapper\x22>\x09\x09\x09<legend>1/2\50%x20Vol\x20chốt\x20non\x20-\x20gồng\x20lời</legend>\x09\x09\x09<div\x20class=\x22vol\x22>\x09\x09\x09\x09<span\x20class=\x22prefix\x22>Long:</span>\x09\x09\x09\x09<input\x20type=\x22text\x22\x20class=\x22input\x22\x20id=\x22vol-long\x22\x20value=\x22\x22\x20readonly\x20/>\x09\x09\x09</div>\x09\x09\x09<div\x20class=\x22vol\x22>\x09\x09\x09\x09<span\x20class=\x22prefix\x22>Short:</span>\x09\x09\x09\x09<input\x20type=\x22text\x22\x20class=\x22input\x22\x20id=\x22vol-short\x22\x20value=\x22\x22\x20readonly\x20/>\x09\x09\x09</div>\x20\x20\x20\x20\x09</fieldset>\x09\x09</div></div>"
+    "<div id=\"EPS\"><span class=\"eps_title\"></span><div id=\"EPS_Content\"><div class=\"input-wrapper\"><input type=\"checkbox\" id=\"fixlayout\" /><span class=\"prefix\"> FULL</span><span class=\"cls\"></span><button class=\"clss\">CLEAR</button><button class=\"go\">GO</button></div><input type=\"number\" name=\"ratio\" id=\"ratio\" step=\"1\" value=\"125\" readonly><div class=\"input-wrapper\"><span class=\"input-prefix\">RISK</span><input autocomplete=\"off\" class=\"input\" type=\"number\" name=\"risk\" id=\"risk\" step=\"0.001\" value=\"10\"><span>USDT</span></div><div class=\"input-wrapper\"><span class=\"input-prefix\">ENTRY</span><input autocomplete=\"off\" class=\"input\" type=\"number\" name=\"entry_price\" id=\"entry_price\" step=\"0.001\" value=\"\"><span>USDT</span></div><div class=\"input-wrapper\"><span class=\"input-prefix\">SL</span><input autocomplete=\"off\" class=\"input\" type=\"number\" name=\"stoploss_price\" id=\"stoploss_price\" step=\"0.001\" value=\"\"><span>USDT</span></div><div class=\"input-wrapper\"><span class=\"input-prefix\">VOLUME</span><input autocomplete=\"off\" class=\"input\" type=\"number\" name=\"vol\" id=\"vol\" step=\"0.001\" readonly value=\"\"><span>COIN</span></div><div class=\"input-wrapper\"><span class=\"input-prefix\">MARGIN</span><input autocomplete=\"off\" class=\"input\" type=\"number\" name=\"margin\" id=\"margin\" step=\"0.001\" readonly><span>USDT</span></div><fieldset class=\"vol-wrapper\"><legend>1/2\50%x20Vol chốt non - gồng lời</legend><div class=\"vol\"><span class=\"prefix\">Long:</span><input type=\"text\" class=\"input\" id=\"vol-long\" value=\"\" readonly /></div><div class=\"vol\"><span class=\"prefix\">Short:</span><input type=\"text\" class=\"input\" id=\"vol-short\" value=\"\" readonly /></div>    </fieldset></div></div>"
   );
 function removeRule() {
   var _0x5dc2d1 = _0x262d7c;
@@ -148,9 +148,9 @@ checkbox[_0x262d7c(0x154)]("change", (_0x2d003f) => {
       (document[_0x4c239a(0x153)](_0x4c239a(0x15d))[0x0][_0x4c239a(0x172)][
         _0x4c239a(0x17a)
       ] = _0x4c239a(0x165)),
-      (document[_0x4c239a(0x153)](
-        "pages-contract-contractinfo-chart-index-header"
-      )[0x0]["style"][_0x4c239a(0x17a)] = "none"),
+      // (document[_0x4c239a(0x153)](
+      //   "pages-contract-contractinfo-chart-index-header"
+      // )[0x0]["style"][_0x4c239a(0x17a)] = "none"),
       (document[_0x4c239a(0x153)](_0x4c239a(0x17b))[0x0][_0x4c239a(0x172)][
         _0x4c239a(0x168)
       ] = _0x4c239a(0x155)),
@@ -186,6 +186,73 @@ function cls() {
   document.getElementById("margin").value = "";
 }
 
+const ids = ['entry_price', 'stoploss_price', 'vol'];
+
+function getData() {
+  const result = [];
+  let check = -1;
+  ids.forEach(e => {
+    const z = document.getElementById(e).value;
+    if (!z) check = 0;
+    result.push(z);
+  });
+  return check === 0 ? 0: result;
+}
+
+function go() {
+  const data = getData();
+  const text1 = document.getElementsByClassName('pages-contract-handle-component-leverageedit-long')[0].innerHTML;
+  const text2 = document.getElementsByClassName('pages-contract-handle-component-leverageedit-short')[0].innerHTML;
+  if (data === 0) {
+    alert(`KHÔNG NHẬP SAO VÀO LỆNH ĐC !!!`);
+    return;
+  } 
+  if (((text1 || '').toLowerCase().includes('isolated')) || ((text2 || '').toLowerCase().includes('isolated'))) {
+    alert(`VÃI LZ ISOLATED !!!`);
+    return;
+  }
+  const tabs = document.getElementsByClassName('pages-contract-handle-index-tabs')[0].childNodes;
+  if (!tabs) return;
+  const parent = document.getElementsByClassName(
+    "pages-contract-handle-index-handleWrapper"
+    )[0];
+  const inputs = parent.querySelectorAll(".ant-input");
+  const buttons1 = document.getElementsByClassName('pages-contract-handle-component-index-longBtn');
+  const buttons2 = document.getElementsByClassName('pages-contract-handle-component-index-shortBtn');
+  const isLong = +data[0] > +data[1];
+  setTimeout(() => {
+    tabs[0].click();
+    inputs[0].focus();
+    document.execCommand("selectAll");
+    document.execCommand("delete");
+    document.execCommand("insertText", false, +data[0]);
+    inputs[1].focus();
+    document.execCommand("selectAll");
+    document.execCommand("delete");
+    document.execCommand("insertText", false, +data[2]);
+    isLong ? buttons1[0].click() : buttons2[0].click();
+    tabs[1].click();
+    inputs[2].focus();
+    document.execCommand("selectAll");
+    document.execCommand("delete");
+    document.execCommand("insertText", false, +data[1]);
+    inputs[3].focus();
+    document.execCommand("selectAll");
+    document.execCommand("delete");
+    document.execCommand("insertText", false, +data[2]);
+    isLong ? buttons2[1].click() : buttons1[1].click();
+    tabs[0].click();
+    setTimeout(() => {
+      goodLuck(isLong, data);
+    }, 500);
+  }, 0);
+}
+
+function goodLuck(isLong, data) {
+  const coin = (document.querySelector('.pages-contract-contractdetail-contractdetail-contractName').innerText || '').split(' ')[0];
+    alert(`VỪA GO ${isLong ? 'LONG' : 'SHORT'} ${coin}. GIÁ ${data[0]}, SL ${data[1]}.\n CHÚC MAY MẮN !!!`);
+}
+
 function fc(n) {
   const val =
     document.getElementsByClassName("input-wrapper")[n].children[1].value;
@@ -202,5 +269,4 @@ function fc(n) {
     document.execCommand("selectAll");
     document.execCommand("delete");
     document.execCommand("insertText", false, +val);
-    
 }
