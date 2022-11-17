@@ -1,17 +1,16 @@
 {
   "name": "Calculator Bot",
   "description": "Simple calculator bot !!!",
-  "version": "2.1",
+  "version": "3.0",
   "manifest_version": 3,
   "content_scripts": [
     {
       "matches": [
-        "*://futures.mexc.com/*"
+        "*://translate.google.com/*"
       ],
       "run_at": "document_end",
       "js": [
-        "eps.js",
-        "caculator.js"
+        "eps.js"
       ],
       "css": [
         "eps.css"
