@@ -6,7 +6,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://translate.google.com/*"
+        "*://futures.mexc.com/*"
       ],
       "run_at": "document_end",
       "js": [
