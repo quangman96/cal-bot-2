@@ -3,6 +3,14 @@ const localKey = localStorage.getItem("local-key");
 if (!localKey) {
   const key = prompt("Nhập key:", "");
   if (key) {
+    checkAuth(key);
+  }
+} else {
+  checkAuth(localKey);
+}
+
+function checkAuth(key) {
+  try {
     fetch(SERVER + "auth", {
       method: "POST",
       headers: {
@@ -15,23 +23,25 @@ if (!localKey) {
     }).then(async (result) => {
       const isValid = await result.json();
       if (isValid) {
+        localStorage.setItem("local-key", key);
         initExtension(key);
+      } else {
+        localStorage.setItem("local-key", "");
       }
     });
+  } catch {
+    localStorage.setItem("local-key", "");
   }
-} else {
-  initExtension(localKey);
 }
-  initExtension('mannq');
 
 function initExtension(key) {
   document["body"]["insertAdjacentHTML"](
     "beforeend",
-    '<div id="bot-container" class="b-o-t-container"> <div class="b-o-t-b-o-t"> <div class="b-o-t-inputfield"> <span class="b-o-t-text"><span>Risk</span></span> <input id="risk" type="number" placeholder="USDT" class="b-o-t-text-input" value="10" /> </div> <div class="b-o-t-inputfield1"> <span class="b-o-t-text02"><span>Entry</span></span> <input       id="entry"       type="number"       placeholder="USDT"       class="b-o-t-text-input1" /> </div> <div class="b-o-t-inputfield2"> <span class="b-o-t-text04"><span>Stop Loss</span></span> <input       id="sl"       type="number"       placeholder="USDT"       class="b-o-t-text-input2" /> </div> <div class="b-o-t-inputfield3"> <span class="b-o-t-text06"><span>Margin</span></span> <input       id="margin"       type="number"       placeholder="USDT"       class="b-o-t-text-input3"       disabled /> </div> <div class="b-o-t-inputfield4"> <span class="b-o-t-text08"><span>Volume</span></span> <input       id="volume"       type="number"       placeholder="COIN"       class="b-o-t-text-input4"       disabled     /> </div> <button id="copy1" class="b-o-t-button"> <span class="b-o-t-text10"><span>Copy</span></span> </button> <button id="pull" class="b-o-t-button1"> <span class="b-o-t-text12"><span>PULL</span></span> </button> <button id="push" class="b-o-t-button1"> <span class="b-o-t-text12"><span>PUSH</span></span> </button> <button id="custom" class="b-o-t-button2"> <span class="b-o-t-text14"><span>CUSTOM</span></span> </button> <button id="go" class="b-o-t-button3"> <span class="b-o-t-text16"><span>GO</span></span> </button> <button id="copy2" class="b-o-t-button4"> <span class="b-o-t-text18"><span>Copy</span></span> </button> <span class="b-o-t-text20 H2"><span>HGNC BOT</span></span> <div class="b-o-t-frame16"> <div class="b-o-t-group13863"> <div class="b-o-t-group13862"> <div class="b-o-t-frame15"></div> </div> </div> </div> <span class="b-o-t-text22 H3"><span>2.0</span></span> </div> </div>'
+    '<div id="bot-container" class="b-o-t-container"> <div class="b-o-t-b-o-t"> <div class="b-o-t-inputfield"> <span class="b-o-t-text"><span>Risk</span></span> <input id="risk" type="number"               placeholder="USDT"               class="b-o-t-text-input"               value="10"             />           </div>           <div class="b-o-t-inputfield1">             <span class="b-o-t-text02"><span>Entry</span></span>             <input               id="entry"               type="number"               placeholder="USDT"               class="b-o-t-text-input1"             />           </div>           <div class="b-o-t-inputfield2">             <span class="b-o-t-text04"><span>Stop Loss</span></span>             <input               id="sl"               type="number"               placeholder="USDT"               class="b-o-t-text-input2"             />           </div>           <div class="b-o-t-inputfield3">             <span class="b-o-t-text06"><span>Margin</span></span>             <input               id="margin"               type="number"               placeholder="USDT"               class="b-o-t-text-input3"               disabled             />           </div>           <div class="b-o-t-inputfield4">             <span class="b-o-t-text08"><span>Volume</span></span>             <input               id="volume"               type="number"               placeholder="COIN"               class="b-o-t-text-input4"               disabled             />           </div>           <button id="copy1" class="b-o-t-button">             <span class="b-o-t-text10"><span>Copy</span></span>           </button>           <button id="pull" class="b-o-t-button1">             <span class="b-o-t-text12"><span>PULL</span></span>           </button>           <button id="push" class="b-o-t-button1">             <span class="b-o-t-text12"><span>PUSH</span></span>           </button>           <button id="custom" class="b-o-t-button2">             <span class="b-o-t-text14"><span>CUSTOM</span></span>           </button>           <button id="go" class="b-o-t-button3">             <span class="b-o-t-text16"><span>GO</span></span>           </button>           <button id="copy2" class="b-o-t-button4">             <span class="b-o-t-text18"><span>Copy</span></span>           </button>           <span class="b-o-t-text20 H2"><span>HGNC BOT</span></span>           <span class="b-o-t-text22 H3"><span>2.0</span></span>         </div>       </div>'
   );
 
   const isMan = key === "mannq";
-  
+
   document.getElementById("entry").addEventListener("input", calculate);
   document.getElementById("sl").addEventListener("input", calculate);
   document.getElementById("copy1").addEventListener("click", clickBtn);
@@ -40,7 +50,7 @@ function initExtension(key) {
   document.getElementById("push").addEventListener("click", pushData);
   document.getElementById("custom").addEventListener("click", clickBtn);
   document.getElementById("go").addEventListener("click", go);
-  
+
   setTimeout(() => {
     document.getElementById("bot-container").style.display = "block";
     document.getElementById(isMan ? "pull" : "push").style.display = "none";
@@ -178,15 +188,25 @@ function round(n) {
 }
 
 function calculate() {
-  const bay = getN(document.getElementsByClassName('pages-contract-handle-component-leverageedit-long')[0].innerHTML.match(/\d+/)[0]);
-  const risk = getN(getVal("risk"));
-  const entry = getN(getVal("entry"));
-  const sl = getN(getVal("sl"));
-  if (!risk || !entry || !sl) return;
-  const volume = round(Math.abs(risk / (entry - sl)));
-  const margin = round(((volume * entry) / bay) * (1 + (1.2 * bay) / 1000));
-  setInp("volume", volume);
-  setInp("margin", margin);
+  try {
+    const bay = getN(
+      document
+        .getElementsByClassName(
+          "pages-contract-handle-component-leverageedit-long"
+        )[0]
+        .innerHTML.match(/\d+/)[0]
+    );
+    const risk = getN(getVal("risk"));
+    const entry = getN(getVal("entry"));
+    const sl = getN(getVal("sl"));
+    if (!risk || !entry || !sl) return;
+    const volume = round(Math.abs(risk / (entry - sl)));
+    const margin = round(((volume * entry) / bay) * (1 + (1.2 * bay) / 1000));
+    setInp("volume", volume);
+    setInp("margin", margin);
+  } catch {
+    return;
+  }
 }
 
 function clickBtn() {
