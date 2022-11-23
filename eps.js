@@ -37,18 +37,18 @@ function checkAuth(key) {
 function initExtension(key) {
   document["body"]["insertAdjacentHTML"](
     "beforeend",
-    '<div id="bot-container" class="b-o-t-container"> <div class="b-o-t-b-o-t"> <div class="b-o-t-inputfield"> <span class="b-o-t-text"><span>Risk</span></span> <input id="risk" type="number"               placeholder="USDT"               class="b-o-t-text-input"               value="10"             />           </div>           <div class="b-o-t-inputfield1">             <span class="b-o-t-text02"><span>Entry</span></span>             <input               id="entry"               type="number"               placeholder="USDT"               class="b-o-t-text-input1"             />           </div>           <div class="b-o-t-inputfield2">             <span class="b-o-t-text04"><span>Stop Loss</span></span>             <input               id="sl"               type="number"               placeholder="USDT"               class="b-o-t-text-input2"             />           </div>           <div class="b-o-t-inputfield3">             <span class="b-o-t-text06"><span>Margin</span></span>             <input               id="margin"               type="number"               placeholder="USDT"               class="b-o-t-text-input3"               disabled             />           </div>           <div class="b-o-t-inputfield4">             <span class="b-o-t-text08"><span>Volume</span></span>             <input               id="volume"               type="number"               placeholder="COIN"               class="b-o-t-text-input4"               disabled             />           </div>           <button id="copy1" class="b-o-t-button">             <span class="b-o-t-text10"><span>Copy</span></span>           </button>           <button id="pull" class="b-o-t-button1">             <span class="b-o-t-text12"><span>PULL</span></span>           </button>           <button id="push" class="b-o-t-button1">             <span class="b-o-t-text12"><span>PUSH</span></span>           </button>           <button id="custom" class="b-o-t-button2">             <span class="b-o-t-text14"><span>CUSTOM</span></span>           </button>           <button id="go" class="b-o-t-button3">             <span class="b-o-t-text16"><span>GO</span></span>           </button>           <button id="copy2" class="b-o-t-button4">             <span class="b-o-t-text18"><span>Copy</span></span>           </button>           <span class="b-o-t-text20 H2"><span>HGNC BOT</span></span>           <span class="b-o-t-text22 H3"><span>2.0</span></span>         </div>       </div>'
+    '<div id="bot-container" class="b-o-t-container"> <div class="b-o-t-b-o-t"> <div class="b-o-t-inputfield"> <span class="b-o-t-text"><span>Risk</span></span> <input id="risk" type="number"               placeholder="USDT"               class="b-o-t-text-input"               value="10"             />           </div>           <div class="b-o-t-inputfield1">             <span class="b-o-t-text02"><span>Entry</span></span>             <input               id="entry"               type="number"               placeholder="USDT"               class="b-o-t-text-input1"             />           </div>           <div class="b-o-t-inputfield2">             <span class="b-o-t-text04"><span>Stop Loss</span></span>             <input               id="sl"               type="number"               placeholder="USDT"               class="b-o-t-text-input2"             />           </div>           <div class="b-o-t-inputfield3">             <span class="b-o-t-text06"><span>Margin</span></span>             <input               id="margin"               type="number"               placeholder="USDT"               class="b-o-t-text-input3"               disabled             />           </div>           <div class="b-o-t-inputfield4">             <span class="b-o-t-text08"><span>Volume</span></span>             <input               id="volume"               type="number"               placeholder="COIN"               class="b-o-t-text-input4"               disabled             />           </div>           <button id="copy1" class="b-o-t-button">             <span class="b-o-t-text10"><span>Copy</span></span>           </button>           <button id="pull" class="b-o-t-button1">             <span class="b-o-t-text12"><span>PULL</span></span>           </button>           <button id="push" class="b-o-t-button1">             <span class="b-o-t-text12"><span>PUSH</span></span>           </button>           <button id="custom" class="b-o-t-button2">             <span class="b-o-t-text14"><span>CUSTOM</span></span>           </button>           <button id="go" class="b-o-t-button3">             <span class="b-o-t-text16"><span>GO</span></span>           </button>           <button id="copy2" class="b-o-t-button4">             <span class="b-o-t-text18"><span>Copy</span></span>           </button>           <span class="b-o-t-text20 H2"><span>HGNC BOT</span></span>           <span class="b-o-t-text22 H3"><span>2.1</span></span>         </div>       </div>'
   );
 
   const isMan = key === "mannq";
 
   document.getElementById("entry").addEventListener("input", calculate);
   document.getElementById("sl").addEventListener("input", calculate);
-  document.getElementById("copy1").addEventListener("click", clickBtn);
-  document.getElementById("copy2").addEventListener("click", clickBtn);
-  document.getElementById("pull").addEventListener("click", clickBtn);
+  document.getElementById("copy1").addEventListener("click", copy1);
+  document.getElementById("copy2").addEventListener("click", copy2);
+  document.getElementById("pull").addEventListener("click", pullData);
   document.getElementById("push").addEventListener("click", pushData);
-  document.getElementById("custom").addEventListener("click", clickBtn);
+  document.getElementById("custom").addEventListener("click", custom);
   document.getElementById("go").addEventListener("click", go);
 
   setTimeout(() => {
@@ -56,6 +56,20 @@ function initExtension(key) {
     document.getElementById(isMan ? "pull" : "push").style.display = "none";
     document.getElementById(isMan ? "push" : "pull").style.display = "flex";
   }, 500);
+
+  setTimeout(() => {
+    try {
+      document.getElementsByClassName('components-newsticker-index-container')[0].remove();
+      document.getElementsByClassName('pages-contract-index-NetWorkStatusWrap')[0].remove();
+      document.getElementsByClassName('pages-contract-index-content pages-contract-index-verticalLayout')[0]
+      .style.setProperty('grid-template-columns', 'minmax(582px,auto) 0px 320px', 'important');
+
+      const listCoin = document.getElementsByClassName('pages-contract-contractdetail-favlist-item');
+      for (const coin of listCoin) {
+        coin.children[0].innerHTML = '  ' + (coin.children[0].innerHTML).split(' ')[0];
+      }
+    } catch {}
+  }, 5000);
 }
 
 function cls() {
@@ -140,6 +154,25 @@ function go() {
   }, 0);
 }
 
+function copy(index) {
+  const data = getData();
+  const parent = document.getElementsByClassName(
+    "pages-contract-handle-index-handleWrapper"
+  )[0];
+  const inputs = parent.querySelectorAll(".ant-input");
+  
+  const n = (document.getElementsByClassName('pages-contract-handle-index-tabs')[0]?.childNodes[0]?.className) ? 0 : 2;
+
+  inputs[n].focus();
+  document.execCommand("selectAll");
+  document.execCommand("delete");
+  document.execCommand("insertText", false, +data[index]);
+  inputs[n + 1].focus();
+  document.execCommand("selectAll");
+  document.execCommand("delete");
+  document.execCommand("insertText", false, +data[2]);
+}
+
 function goodLuck(isLong, data) {
   const coin = (
     document.querySelector(
@@ -149,26 +182,8 @@ function goodLuck(isLong, data) {
   alert(
     `VỪA GO ${isLong ? "LONG" : "SHORT"} ${coin}. GIÁ ${data[0]}, SL ${
       data[1]
-    }.\n CHÚC MAY MẮN !!!`
+    }.\n XEM LẠI LỆNH ĐÚNG CHƯA.\n CHÚC MAY MẮN !!!`
   );
-}
-
-function fc(n) {
-  const val =
-    document.getElementsByClassName("input-wrapper")[n].children[1].value;
-  const isOpen =
-    document.getElementsByClassName("pages-contract-handle-index-active")[0]
-      .innerHTML === "Mở vị thế";
-  const parent = document.getElementsByClassName(
-    "pages-contract-handle-index-handleWrapper"
-  )[0];
-  const inputs = parent.querySelectorAll(".ant-input");
-  const index = (n === 4 ? 1 : 0) + (isOpen ? 0 : 2);
-  const element = inputs[index];
-  element.focus();
-  document.execCommand("selectAll");
-  document.execCommand("delete");
-  document.execCommand("insertText", false, +val);
 }
 
 function getVal(name) {
@@ -209,9 +224,18 @@ function calculate() {
   }
 }
 
-function clickBtn() {
-  console.log(`Click`);
+function copy1() {
+  copy(0);
 }
+
+function copy2() {
+  copy(1);
+}
+
+function custom() {
+  console.log(`custom`);
+}
+
 
 async function pushData() {
   const entry = getN(getVal("entry"));

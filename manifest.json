@@ -1,7 +1,7 @@
 {
   "name": "Calculator Bot",
   "description": "Simple calculator bot !!!",
-  "version": "3.0",
+  "version": "2.1",
   "manifest_version": 3,
   "content_scripts": [
     {

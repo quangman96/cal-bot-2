@@ -370,7 +370,7 @@
   top: 79.5px;
   left: 20.25px;
   width: 103px;
-  display: flex;
+  display: none;
   padding: 9.75px 18px;
   overflow: hidden;
   position: absolute;
